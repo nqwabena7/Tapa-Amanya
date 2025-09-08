@@ -25,22 +25,6 @@
     header h1 { font-size: 3.5rem; font-weight: bold; }
     header p { font-size: 1.3rem; }
     .section-title { margin: 60px 0 30px; text-align: center; font-weight: bold; }
-    /* News Ticker */
-    .news-ticker {
-      background: #f8d210;
-      padding: 10px;
-      font-weight: bold;
-      overflow: hidden;
-    }
-    .news-ticker span {
-      display: inline-block;
-      padding-right: 50px;
-      animation: ticker 15s linear infinite;
-    }
-    @keyframes ticker {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
     /* Footer */
     footer {
       background: #1a1a1a;
@@ -61,6 +45,15 @@
     .icon-card { text-align: center; padding: 20px; transition: transform .3s; }
     .icon-card:hover { transform: translateY(-5px); }
     .icon-card img { width: 60px; margin-bottom: 15px; }
+    /* Gallery Hover Effect */
+    .gallery-thumb {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+    .gallery-thumb:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
   </style>
 </head>
 <body>
@@ -77,8 +70,6 @@
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="heritage-faith.html">Heritage & Faith</a></li>
           <li class="nav-item"><a class="nav-link" href="dreamers.html">Dreamers Association</a></li>
-          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
-          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
           <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="#voices">Voices</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -92,17 +83,10 @@
     <div class="content">
       <h1>Welcome to Tapa Amanya</h1>
       <p>Rooted in Tradition • Guided by Faith • Growing Together</p>
-      <a href="#news" class="btn btn-primary btn-lg m-2">Latest News</a>
-      <a href="#events" class="btn btn-outline-light btn-lg m-2">Upcoming Events</a>
+      <a href="#dreamers" class="btn btn-primary btn-lg m-2">Join Dreamers</a>
+      <a href="#gallery" class="btn btn-outline-light btn-lg m-2">Explore Gallery</a>
     </div>
   </header>
-
-  <!-- News Ticker -->
-  <div class="news-ticker">
-    <span>📢 Scholarship applications are now open!</span>
-    <span>📢 Community clean-up day: Sept 15, 2025</span>
-    <span>📢 Farmers’ Market resumes Sept 20, 2025</span>
-  </div>
 
   <!-- About -->
   <section id="about" class="container my-5">
@@ -163,70 +147,6 @@
     </div>
   </section>
 
-  <!-- News -->
-  <section id="news" class="bg-light py-5">
-    <div class="container">
-      <h2 class="section-title">Community News</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <img src="assets/images/news1.jpg" class="card-img-top" alt="News">
-            <div class="card-body">
-              <h5 class="card-title">Town Hall Renovation</h5>
-              <p class="card-text">The town hall is being renovated to serve our people better.</p>
-              <a href="#" class="btn btn-sm btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <img src="assets/images/news2.jpg" class="card-img-top" alt="News">
-            <div class="card-body">
-              <h5 class="card-title">New Health Center</h5>
-              <p class="card-text">A modern health center opens to provide affordable care for residents.</p>
-              <a href="#" class="btn btn-sm btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <img src="assets/images/news3.jpg" class="card-img-top" alt="News">
-            <div class="card-body">
-              <h5 class="card-title">Scholarship Program</h5>
-              <p class="card-text">Applications now open for the town’s scholarship scheme.</p>
-              <a href="#" class="btn btn-sm btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Events -->
-  <section id="events" class="container my-5">
-    <h2 class="section-title">Upcoming Events</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="border p-3 rounded shadow-sm h-100">
-          <h5>Community Clean-up Day</h5>
-          <p><strong>Date:</strong> Sept 15, 2025</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="border p-3 rounded shadow-sm h-100">
-          <h5>Farmers’ Market</h5>
-          <p><strong>Date:</strong> Sept 20, 2025</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="border p-3 rounded shadow-sm h-100">
-          <h5>Independence Celebration</h5>
-          <p><strong>Date:</strong> Oct 1, 2025</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Latest Gallery Teaser -->
   <section id="gallery" class="py-5">
     <div class="container text-center">
@@ -234,13 +154,13 @@
       <p class="mb-4">Snapshots from our most recent community and Dreamers Association events.</p>
       <div class="row g-3">
         <div class="col-md-4 col-sm-6">
-          <img src="assets/images/gallery1.jpg" class="img-fluid rounded shadow-sm" alt="Funeral Support">
+          <img src="assets/images/gallery1.jpg" class="img-fluid rounded shadow-sm gallery-thumb" alt="Funeral Support">
         </div>
         <div class="col-md-4 col-sm-6">
-          <img src="assets/images/gallery2.jpg" class="img-fluid rounded shadow-sm" alt="Outdooring">
+          <img src="assets/images/gallery2.jpg" class="img-fluid rounded shadow-sm gallery-thumb" alt="Outdooring">
         </div>
         <div class="col-md-4 col-sm-6">
-          <img src="assets/images/gallery3.jpg" class="img-fluid rounded shadow-sm" alt="Graduation">
+          <img src="assets/images/gallery3.jpg" class="img-fluid rounded shadow-sm gallery-thumb" alt="Graduation">
         </div>
       </div>
       <a href="dreamers.html#gallery" class="btn btn-primary btn-lg mt-4">View Full Gallery</a>
@@ -292,9 +212,8 @@
             <li><a href="#about">About</a></li>
             <li><a href="heritage-faith.html">Heritage & Faith</a></li>
             <li><a href="dreamers.html">Dreamers Association</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#events">Events</a></li>
             <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#voices">Voices</a></li>
           </ul>
         </div>
         <!-- Heritage -->
