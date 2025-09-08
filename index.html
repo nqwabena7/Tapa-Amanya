@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tapa Amanya Community</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; }
+    header {
+      background: url('assets/images/town.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 140px 20px;
+      text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+    }
+    header .content { position: relative; z-index: 1; }
+    header h1 { font-size: 3.5rem; font-weight: bold; }
+    .section-title {
+      margin: 60px 0 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .news-ticker {
+      background: #f8d210;
+      padding: 10px;
+      font-weight: bold;
+      overflow: hidden;
+    }
+    .news-ticker span {
+      display: inline-block;
+      padding-right: 50px;
+      animation: ticker 15s linear infinite;
+    }
+    @keyframes ticker {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: #ccc;
+      padding: 40px 0;
+    }
+    footer h5 { color: #fff; margin-bottom: 20px; font-weight: bold; }
+    footer a { color: #ccc; text-decoration: none; }
+    footer a:hover { color: #f8d210; text-decoration: underline; }
+    .footer-bottom {
+      border-top: 1px solid #444;
+      margin-top: 30px;
+      padding-top: 15px;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Tapa Amanya</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#heritage">Heritage</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faith">Faith</a></li>
+          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#voices">Voices</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header>
+    <div class="content">
+      <h1>Welcome to Tapa Amanya</h1>
+      <p class="lead">Rooted in Tradition • Guided by Faith • Growing Together</p>
+      <a href="#news" class="btn btn-primary btn-lg m-2">Latest News</a>
+      <a href="#events" class="btn btn-outline-light btn-lg m-2">Upcoming Events</a>
+    </div>
+  </header>
+
+  <!-- News Ticker -->
+  <div class="news-ticker">
+    <span>📢 Scholarship applications are now open!</span>
+    <span>📢 Community clean-up day: Sept 15, 2025</span>
+    <span>📢 Farmers’ Market resumes Sept 20, 2025</span>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="section-title">About Our Town</h2>
+        <p>
+          Welcome to Tapa Amanya, a place where heritage, culture, and faith come together. 
+          Our community is rich in tradition and united by Christian values. This platform 
+          helps residents stay updated, celebrate our culture, and strengthen bonds across generations.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="assets/images/about-town.jpg" class="img-fluid rounded shadow" alt="About Our Town">
+      </div>
+    </div>
+  </section>
+
+  <!-- Heritage Section -->
+  <section id="heritage" class="bg-light py-5">
+    <div class="container">
+      <h2 class="section-title">Our Heritage & Culture</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="assets/images/festival.jpg" class="img-fluid rounded shadow" alt="Festival">
+          <h5 class="mt-2">Annual Festival</h5>
+          <p>Celebrating our ancestors and rich traditions every year with unity and joy.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="assets/images/tradition.jpg" class="img-fluid rounded shadow" alt="Tradition">
+          <h5 class="mt-2">Chieftaincy & Leadership</h5>
+          <p>Our chiefs and elders guide us with wisdom, preserving the legacy of our forefathers.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="assets/images/dance.jpg" class="img-fluid rounded shadow" alt="Dance">
+          <h5 class="mt-2">Music & Dance</h5>
+          <p>Traditional drumming, dancing, and storytelling connect us to our roots.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Faith Section -->
+  <section id="faith" class="py-5 text-center">
+    <div class="container">
+      <h2 class="section-title">Faith & Unity</h2>
+      <p class="lead">Our community stands strong in faith, guided by Christian values and respect for all traditions.</p>
+      <blockquote class="blockquote">
+        <p>"How good and pleasant it is when God’s people live together in unity!"</p>
+        <footer class="blockquote-footer">Psalm 133:1</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section id="news" class="bg-light py-5">
+    <div class="container">
+      <h2 class="section-title">Community News</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="assets/images/news1.jpg" class="card-img-top" alt="News">
+            <div class="card-body">
+              <h5 class="card-title">Town Hall Renovation</h5>
+              <p class="card-text">The town hall is undergoing renovations to better serve the community.</p>
+              <a href="#" class="btn btn-sm btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="assets/images/news2.jpg" class="card-img-top" alt="News">
+            <div class="card-body">
+              <h5 class="card-title">New Health Center</h5>
+              <p class="card-text">A modern health center is now open, providing affordable care for residents.</p>
+              <a href="#" class="btn btn-sm btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="assets/images/news3.jpg" class="card-img-top" alt="News">
+            <div class="card-body">
+              <h5 class="card-title">Scholarship Program</h5>
+              <p class="card-text">Applications are now open for the town’s scholarship initiative for students.</p>
+              <a href="#" class="btn btn-sm btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="container my-5">
+    <h2 class="section-title">Upcoming Events</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="border p-3 rounded shadow-sm">
+          <h5>Community Clean-up Day</h5>
+          <p><strong>Date:</strong> Sept 15, 2025</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="border p-3 rounded shadow-sm">
+          <h5>Farmers’ Market</h5>
+          <p><strong>Date:</strong> Sept 20, 2025</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="border p-3 rounded shadow-sm">
+          <h5>Independence Celebration</h5>
+          <p><strong>Date:</strong> Oct 1, 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voices -->
+  <section id="voices" class="bg-light py-5">
+    <div class="container">
+      <h2 class="section-title">Community Voices</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-3 bg-white rounded shadow-sm">
+            <p>“This platform helps me stay informed about everything happening in our town.”</p>
+            <small>- Ama, Student</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 bg-white rounded shadow-sm">
+            <p>“I love how easy it is to find local events and participate with others.”</p>
+            <small>- Danso, Teacher</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 bg-white rounded shadow-sm">
+            <p>“It feels like our community is more connected than ever before.”</p>
+            <small>- Boadu, Artist</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="row">
+        <!-- Contact -->
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <p>Email: <a href="mailto:info@yourtown.com">info@yourtown.com</a></p>
+          <p>Phone: +233 123 456 789</p>
+          <p>Address: Main Street, Amanya</p>
+        </div>
+        <!-- Quick Links -->
+        <div class="col-md-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#about">About</a></li>
+            <li><a href="#heritage">Heritage</a></li>
+            <li><a href="#faith">Faith</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#events">Events</a></li>
+          </ul>
+        </div>
+        <!-- Heritage -->
+        <div class="col-md-3">
+          <h5>Cultural Heritage</h5>
+          <p>Discover our festivals, customs, and ancestral wisdom that unite our people.</p>
+        </div>
+        <!-- Faith -->
+        <div class="col-md-3">
+          <h5>Spiritual Life</h5>
+          <p>“Unless the Lord builds the house, the builders labor in vain.”</p>
+          <small>- Psalm 127:1</small><br>
+          <a href="#">Local Churches</a>
+        </div>
+      </div>
+      <div class="footer-bottom mt-3 text-center">
+        <p>© 2025 Tapa Amanya Community • Rooted in Tradition • Guided by Faith • Growing Together</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
